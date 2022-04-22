@@ -31,16 +31,6 @@ public class GameManager : MonoBehaviour
         ObjectColorsDictionary.CreateDictionary();
     }
 
-    private void OnEnable()
-    {
-        ObjectSpawner.OnObjectSpawn += AddScore;
-    }
-
-    private void OnDisable()
-    {
-        ObjectSpawner.OnObjectSpawn -= AddScore;
-    }
-
     /// Functions ///
 
     public void LoseLife()

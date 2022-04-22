@@ -31,8 +31,6 @@ public class ObjectSpawner : MonoBehaviour
         spawnArea = GetComponent<BoxCollider>();
 
         OnStartSpawn += SpawnSet;
-
-        OnStartSpawn?.Invoke(30);
     }
 
     private void OnDisable()
@@ -47,6 +45,11 @@ public class ObjectSpawner : MonoBehaviour
     }
 
     /// Functions ///
+
+    public static void InvokeOnSpawnStart(int numObjs)
+    {
+        OnStartSpawn?.Invoke(numObjs);
+    }
 
     private void SpawnSet(int numObjects)
     {

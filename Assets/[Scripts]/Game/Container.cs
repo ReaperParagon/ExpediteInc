@@ -6,6 +6,9 @@ using UnityEngine.Events;
 [RequireComponent(typeof(ObjectType))]
 public class Container : MonoBehaviour
 {
+    public delegate void OnObjectEnterEvent();
+    public static event OnObjectEnterEvent OnObjectEnterContainer;
+
     public UnityEvent OnCorrect;
     public UnityEvent OnIncorrect;
     private ObjectType objectType;
@@ -56,7 +59,7 @@ public class Container : MonoBehaviour
             else
                 OnIncorrect?.Invoke();
 
-            // print(ot.colorType + ",  " + objectType.colorType);
+            OnObjectEnterContainer?.Invoke();
         }
 
         // Destroy the other

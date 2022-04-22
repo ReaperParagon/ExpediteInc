@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3490288748360460169}
   - component: {fileID: 3490288748360460168}
   - component: {fileID: 3490288748360460172}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ObjectSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}

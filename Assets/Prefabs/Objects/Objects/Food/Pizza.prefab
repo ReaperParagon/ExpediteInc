@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4416971812800172750}
   - component: {fileID: 6002130482829724181}
+  - component: {fileID: 987111580794620810}
   m_Layer: 7
   m_Name: Pizza
   m_TagString: Block
@@ -49,6 +50,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &987111580794620810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3893340826992789620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5c65a74a6b99e4dbc9ed34a63d27f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorType: 0
+  materialRenderers: []
 --- !u!1 &4075428967628548981
 GameObject:
   m_ObjectHideFlags: 0

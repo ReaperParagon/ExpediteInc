@@ -960,6 +960,7 @@ GameObject:
   - component: {fileID: 8769024371747159494}
   - component: {fileID: 4040531359564865679}
   - component: {fileID: 8115477100789663385}
+  - component: {fileID: -7381602738676536453}
   m_Layer: 7
   m_Name: Sheep
   m_TagString: Block
@@ -1039,6 +1040,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2, y: 2.01, z: 0.55}
   m_Center: {x: 0, y: 0.9, z: 1.16}
+--- !u!114 &-7381602738676536453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6850202118215928805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5c65a74a6b99e4dbc9ed34a63d27f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorType: 0
+  materialRenderer: {fileID: 0}
 --- !u!1 &7011181619527670276
 GameObject:
   m_ObjectHideFlags: 0

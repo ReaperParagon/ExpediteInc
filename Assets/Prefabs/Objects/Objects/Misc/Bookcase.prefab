@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 3255317528062463172}
   - component: {fileID: 8478692294363204960}
   - component: {fileID: 4525904878825950064}
+  - component: {fileID: -3771695480956044562}
   m_Layer: 7
   m_Name: Bookcase
   m_TagString: Block
@@ -146,6 +147,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.8, y: 3.33, z: 0.66}
   m_Center: {x: 0, y: 1.63, z: 0.04}
+--- !u!114 &-3771695480956044562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2767152629253691006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5c65a74a6b99e4dbc9ed34a63d27f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorType: 0
+  materialRenderers: []
 --- !u!1 &3399779901590456539
 GameObject:
   m_ObjectHideFlags: 0

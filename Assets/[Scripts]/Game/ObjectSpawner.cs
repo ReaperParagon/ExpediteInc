@@ -7,6 +7,12 @@ public class ObjectSpawner : MonoBehaviour
     public delegate void OnObjectSpawnEvent();
     public static event OnObjectSpawnEvent OnObjectSpawn;
 
+    public delegate void OnFinishSpawningEvent();
+    public static event OnFinishSpawningEvent OnFinishSpawn;
+
+    public delegate void OnStartSpawningEvent(int numObjects);
+    public static event OnStartSpawningEvent OnStartSpawn;
+
     [SerializeField]
     private LayerMask platformLayerMask;
 
@@ -14,24 +20,25 @@ public class ObjectSpawner : MonoBehaviour
     private Collection spawnableObjects;
 
     [SerializeField]
-    private float timer = 1.0f;
+    private float spawnDelay = 0.15f;
 
     private BoxCollider spawnArea;
     private IEnumerator spawnCoroutine;
     private GameObject nextObject;
-    private ObjectPreview preview;
 
     void OnEnable()
     {
         spawnArea = GetComponent<BoxCollider>();
-        preview = FindObjectOfType<ObjectPreview>();
 
-        spawnCoroutine = SpawnObjectCoroutine();
-        StartCoroutine(spawnCoroutine);
+        OnStartSpawn += SpawnSet;
+
+        OnStartSpawn?.Invoke(30);
     }
 
     private void OnDisable()
     {
+        OnStartSpawn -= SpawnSet;
+
         if (spawnCoroutine == null)
             return;
 
@@ -40,6 +47,12 @@ public class ObjectSpawner : MonoBehaviour
     }
 
     /// Functions ///
+
+    private void SpawnSet(int numObjects)
+    {
+        spawnCoroutine = SpawnObjectCoroutine(numObjects);
+        StartCoroutine(spawnCoroutine);
+    }
 
     private Vector3 GetRandomPointInSpawnArea()
     {
@@ -71,9 +84,6 @@ public class ObjectSpawner : MonoBehaviour
     private void GetNextObject()
     {
         nextObject = spawnableObjects.GetObject();
-
-        if (preview != null)
-            preview.SetObject(nextObject);
     }
 
     private void SpawnObject()
@@ -85,19 +95,27 @@ public class ObjectSpawner : MonoBehaviour
         obj.transform.position = GetSpawnPoint();
         obj.transform.rotation = GetRandomRotation();
 
+        // Set Object Type and Color
+        if (obj.TryGetComponent(out ObjectType objType))
+            objType.SetRandomObjectColor();
+
         OnObjectSpawn?.Invoke();
     }
 
     /// Coroutines ///
 
-    IEnumerator SpawnObjectCoroutine()
+    IEnumerator SpawnObjectCoroutine(int numObjs)
     {
-        GetNextObject();
-        yield return new WaitForSeconds(timer);
-        SpawnObject();
+        for (int i = 0; i < numObjs; i++)
+        {
+            GetNextObject();
+            yield return new WaitForSeconds(spawnDelay);
+            SpawnObject();
+        }
 
-        spawnCoroutine = SpawnObjectCoroutine();
-        StartCoroutine(spawnCoroutine);
+        OnFinishSpawn?.Invoke();
+
+        spawnCoroutine = null;
     }
 
 }

@@ -166,6 +166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3116355909117721495}
   - component: {fileID: 3362703428956884229}
+  - component: {fileID: -3998036953505135799}
   m_Layer: 7
   m_Name: Whale
   m_TagString: Block
@@ -206,6 +207,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-3998036953505135799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2338588238070341933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5c65a74a6b99e4dbc9ed34a63d27f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorType: 0
+  materialRenderer: {fileID: 0}
 --- !u!1 &2370646343932361674
 GameObject:
   m_ObjectHideFlags: 0

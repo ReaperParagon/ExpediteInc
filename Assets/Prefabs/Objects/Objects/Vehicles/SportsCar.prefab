@@ -888,6 +888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7019987649808188307}
   - component: {fileID: 413365608634198897}
+  - component: {fileID: 4840038564195748798}
   m_Layer: 7
   m_Name: SportsCar
   m_TagString: Block
@@ -927,3 +928,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4840038564195748798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7649312558087805225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5c65a74a6b99e4dbc9ed34a63d27f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorType: 0
+  materialRenderers: []

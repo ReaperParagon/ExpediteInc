@@ -1753,6 +1753,7 @@ GameObject:
   - component: {fileID: 6885597971372762428}
   - component: {fileID: 4074383241867130853}
   - component: {fileID: 3153806569872675233}
+  - component: {fileID: -5956245110312502096}
   m_Layer: 7
   m_Name: Adventurer
   m_TagString: Block
@@ -1829,6 +1830,20 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0.07}
+--- !u!114 &-5956245110312502096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5928053630977081095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5c65a74a6b99e4dbc9ed34a63d27f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorType: 0
+  materialRenderer: {fileID: 0}
 --- !u!1 &5963999790758815449
 GameObject:
   m_ObjectHideFlags: 0

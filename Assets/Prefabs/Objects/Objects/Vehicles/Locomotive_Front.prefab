@@ -938,6 +938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5961098098467054912}
   - component: {fileID: 2021674162235317604}
+  - component: {fileID: -419743831507221902}
   m_Layer: 7
   m_Name: Locomotive_Front
   m_TagString: Block
@@ -982,6 +983,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-419743831507221902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6481176360878538746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5c65a74a6b99e4dbc9ed34a63d27f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorType: 0
+  materialRenderers: []
 --- !u!1 &7229315767923362161
 GameObject:
   m_ObjectHideFlags: 0

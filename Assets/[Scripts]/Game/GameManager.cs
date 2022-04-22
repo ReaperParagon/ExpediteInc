@@ -25,15 +25,19 @@ public class GameManager : MonoBehaviour
 
     private int score;
 
+    private void Awake()
+    {
+        // Create Object Color Dictionary
+        ObjectColorsDictionary.CreateDictionary();
+    }
+
     private void OnEnable()
     {
-        DeathPlane.OnObjectFell += LoseLife;
         ObjectSpawner.OnObjectSpawn += AddScore;
     }
 
     private void OnDisable()
     {
-        DeathPlane.OnObjectFell -= LoseLife;
         ObjectSpawner.OnObjectSpawn -= AddScore;
     }
 
@@ -41,7 +45,6 @@ public class GameManager : MonoBehaviour
 
     private void LoseLife()
     {
-        score--;
         if (--lives <= 0)
             EndGame();
 
@@ -58,7 +61,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateScoreUI()
     {
-        string scoreString = "Stack: " + score.ToString();
+        string scoreString = "Score: " + score.ToString();
         resultsScoreText.text = scoreString;
         scoreText.text = scoreString;
     }

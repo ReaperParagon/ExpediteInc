@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         healthUI.UpdateUI(lives);
     }
 
-    private void EndGame()
+    public void EndGame()
     {
         resultsUI.SetActive(true);
 

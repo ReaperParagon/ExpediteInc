@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ObjectTracker : MonoBehaviour
 {
+    public delegate void OnSetCompleteEvent();
+    public static event OnSetCompleteEvent OnSetComplete;
+
     public int spawnItems = 3;
     public int increment = 1;
 
@@ -35,6 +38,8 @@ public class ObjectTracker : MonoBehaviour
         // Start Spawning More
         ObjectSpawner.InvokeOnSpawnStart(spawnItems);
         spawnItems += increment;
+
+        OnSetComplete?.Invoke();
 
         canSpawn = false;
     }

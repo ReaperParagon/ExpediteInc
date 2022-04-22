@@ -49,8 +49,8 @@ MonoBehaviour:
   musicSource: {fileID: 7883097779725426035}
   menuSource: {fileID: 7883097779725426032}
   musicClips:
-  - {fileID: 8300000, guid: 828f55b076d58164d93d0e6c9f760e36, type: 3}
-  - {fileID: 8300000, guid: 42647f934b8ec3044ae51360eeed31c6, type: 3}
+  - {fileID: 8300000, guid: 21ac50e0a58e74843b4122bb9814964a, type: 3}
+  - {fileID: 8300000, guid: 0c640ea7a5fc5c749a105b4ea41cfa6a, type: 3}
 --- !u!82 &7883097779725426035
 AudioSource:
   m_ObjectHideFlags: 0

@@ -421,8 +421,6 @@ GameObject:
   - component: {fileID: 7555008430573004333}
   - component: {fileID: 4379122080178370723}
   - component: {fileID: 2201296531749492780}
-  - component: {fileID: 9090818378273282815}
-  - component: {fileID: 8344964566596492621}
   - component: {fileID: 4686534015301041761}
   m_Layer: 7
   m_Name: Desk
@@ -477,34 +475,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.88, y: 0.45, z: 0.88}
-  m_Center: {x: 0, y: 0.71, z: -0.03}
---- !u!65 &9090818378273282815
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7175105634492415127}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.49, z: 0.88}
-  m_Center: {x: -0.85, y: 0.24, z: -0.03}
---- !u!65 &8344964566596492621
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7175105634492415127}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.49, z: 0.88}
-  m_Center: {x: 0.85, y: 0.24, z: -0.03}
+  m_Size: {x: 1.88, y: 1, z: 0.88}
+  m_Center: {x: 0, y: 0.5, z: -0.03}
 --- !u!114 &4686534015301041761
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,12 +4,9 @@ using UnityEngine;
 
 public enum ObjectColor
 {
-    Red,
-    Blue,
+    Orange,
+    Purple,
     Green,
-    Cyan,
-    Magenta,
-    Yellow,
     NumColors
 }
 
@@ -21,12 +18,9 @@ public class ObjectColorsDictionary
     {
         colorDictionary.Clear();
 
-        colorDictionary.Add(ObjectColor.Red, Color.red);
-        colorDictionary.Add(ObjectColor.Blue, Color.blue);
-        colorDictionary.Add(ObjectColor.Green, Color.green);
-        colorDictionary.Add(ObjectColor.Cyan, Color.cyan);
-        colorDictionary.Add(ObjectColor.Magenta, Color.magenta);
-        colorDictionary.Add(ObjectColor.Yellow, Color.yellow);
+        colorDictionary.Add(ObjectColor.Green, new Color(0.0f, 1.0f, 0.5f, 1.0f));
+        colorDictionary.Add(ObjectColor.Purple, new Color(0.5f, 0.0f, 1.0f, 1.0f));
+        colorDictionary.Add(ObjectColor.Orange, new Color(1.0f, 0.5f, 0.0f, 1.0f));
     }
 
     public static Color GetColor(ObjectColor oc)

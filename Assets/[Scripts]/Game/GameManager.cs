@@ -43,17 +43,15 @@ public class GameManager : MonoBehaviour
 
     /// Functions ///
 
-    private void LoseLife()
+    public void LoseLife()
     {
         if (--lives <= 0)
             EndGame();
 
-        // TODO: Play sound effects / Particle effects
-
         UpdateHealthUI();
     }
 
-    private void AddScore()
+    public void AddScore()
     {
         score++;
         UpdateScoreUI();

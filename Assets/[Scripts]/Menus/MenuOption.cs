@@ -2,13 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Events;
 
 public class MenuOption : MonoBehaviour
 {
-    public UnityEvent OnTrigger;
-
-
     /// Functions ///
 
     public void PlayButtonSoundEffect()
@@ -25,15 +21,4 @@ public class MenuOption : MonoBehaviour
     {
         Application.Quit();
     }
-
-    /// Collisions ///
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Block"))
-        {
-            OnTrigger.Invoke();
-        }
-    }
-
 }

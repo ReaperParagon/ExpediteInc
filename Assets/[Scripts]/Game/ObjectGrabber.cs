@@ -19,12 +19,6 @@ public class ObjectGrabber : MonoBehaviour
     public float objectBlockedDistance = 10.0f;
     public float holdOffset = 20.0f;
 
-    [Header("Audio")]
-    [SerializeField]
-    private AudioSource grabAudioSource;
-    [SerializeField]
-    private AudioSource dropAudioSource;
-
     private bool IsObjectBeingHeld;
 
 
@@ -56,6 +50,8 @@ public class ObjectGrabber : MonoBehaviour
     {
         if (IsObjectBeingHeld)
         {
+            if (heldObject == null) { HeldObjectRemoved(); return; }
+
             // Get rid of velocity
             heldObjectRigidbody.velocity = heldObjectRigidbody.angularVelocity = Vector3.zero;
 
@@ -76,8 +72,6 @@ public class ObjectGrabber : MonoBehaviour
         // Check if we are holding an object and if the object is a block
         if (!IsObjectBeingHeld && objectToHold.CompareTag("Block"))
         {
-            PlayAudio(grabAudioSource);
-
             // Set our held object
             heldObject = objectToHold;
             heldObjectRigidbody = heldObject.GetComponent<Rigidbody>();
@@ -99,8 +93,6 @@ public class ObjectGrabber : MonoBehaviour
     {
         if (IsObjectBeingHeld)
         {
-            PlayAudio(dropAudioSource);
-
             // Enable gravity
             heldObjectRigidbody.useGravity = true;
 
@@ -116,6 +108,17 @@ public class ObjectGrabber : MonoBehaviour
             // Event
             OnGrab?.Invoke(IsObjectBeingHeld, null);
         }
+    }
+
+    private void HeldObjectRemoved()
+    {
+        heldObject = null;
+        heldObjectRigidbody = null;
+        heldObjectCollider = null;
+        IsObjectBeingHeld = false;
+
+        // Event
+        OnGrab?.Invoke(IsObjectBeingHeld, null);
     }
 
     private bool LookAtCheck(out RaycastHit hit, int layerMask)
